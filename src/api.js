@@ -7,7 +7,7 @@ export const fetchResponse = async (chat) => {
         const response = await fetch('https://chatgpt-server01.vercel.app/', {
             method: 'POST',
             headers: {
-                "Content-Type": "application/json" 
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 message: chat.map((message) => message.message).join(" \n ")
